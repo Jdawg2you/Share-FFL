@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Share This Opportunity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,800&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { height: 100%; }
+  body {
+    font-family: 'Inter Tight', -apple-system, sans-serif;
+    background: #0a0e1a;
+    color: #f5f1e8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    overflow-x: hidden;
+    position: relative;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 20%, rgba(212, 165, 90, 0.15), transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(95, 130, 180, 0.12), transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .container {
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.8s ease-out;
+  }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .badge {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(212, 165, 90, 0.12);
+    border: 1px solid rgba(212, 165, 90, 0.3);
+    border-radius: 100px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #d4a55a;
+    margin-bottom: 28px;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 800;
+    font-size: clamp(36px, 9vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  h1 .accent {
+    font-style: italic;
+    font-weight: 400;
+    color: #d4a55a;
+  }
+  .subtitle {
+    font-size: 17px;
+    line-height: 1.5;
+    color: rgba(245, 241, 232, 0.7);
+    margin-bottom: 40px;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 360px;
+    padding: 20px 32px;
+    background: linear-gradient(135deg, #d4a55a 0%, #c89248 100%);
+    color: #0a0e1a;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 10px 30px rgba(212, 165, 90, 0.25), 0 0 0 1px rgba(212, 165, 90, 0.1);
+  }
+  .cta-button:hover, .cta-button:active {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(212, 165, 90, 0.35), 0 0 0 1px rgba(212, 165, 90, 0.2);
+  }
+  .cta-button svg {
+    width: 20px;
+    height: 20px;
+  }
+  .steps {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: rgba(245, 241, 232, 0.5);
+  }
+  .step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: rgba(212, 165, 90, 0.15);
+    color: #d4a55a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .footer {
+    margin-top: 56px;
+    font-size: 12px;
+    color: rgba(245, 241, 232, 0.35);
+    letter-spacing: 0.5px;
+  }
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(212, 165, 90, 0.3);
+    margin: 0 auto 32px;
+  }
+  @media (max-width: 380px) {
+    .steps { gap: 14px; }
+    .step { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Share Family First Life</div>
+    <h1>Know someone <span class="accent">looking for more?</span></h1>
+    <div class="divider"></div>
+    <p class="subtitle">Tap below to share this opportunity with anyone in your contacts. The message is ready — you just pick who.</p>
+
+    <a href="sms:&body=Hey, Hope all is well with your Family. Just a heads up I just started with a new Company and They are looking to bring on New Reps if you know anyone they pay really well. Part Time and Full Time!! Here is an Overview Video Pass this Info Along for me! JoinUS.FFLALL.com" class="cta-button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      </svg>
+      Send to a Friend
+    </a>
+
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span>Tap button</div>
+      <div class="step"><span class="step-num">2</span>Pick contact</div>
+      <div class="step"><span class="step-num">3</span>Hit send</div>
+    </div>
+
+    <div class="footer">JoinUS.FFLALL.com</div>
+  </div>
+</body>
+</html>
